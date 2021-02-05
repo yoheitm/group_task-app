@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  width: 300px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  background-color: hsl(120, 40%, 25%);
+  border: solid 1px hsl(120, 14%, 36%);
+  height: 100px;
+  padding: 0 20px;
+}
+.rooms {
+  background-color: hsl(120, 40%, 25%);
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+.shift {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
+.shift-header {
+  height: 100px;
+  padding: 0 40px;
+}
+.messages {
+  background-color: #ffffff;
+  height: calc(100vh - 100px - 90px);
+  border: solid 1px hsl(0, 0%, 91%);
+  padding: 40px 40px 0;
+}
+.form {
+  background-color: #ffffff;
+  height: 90px;
+  padding: 20px 40px;
+}
