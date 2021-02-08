@@ -1,0 +1,30 @@
+.shift-group-form {
+  display: flex;
+  flex-flow:column ;
+  justify-content:center ;
+  align-items: center;
+  overflow: scroll;
+}
+
+.shift-group-name {
+  height: 30px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.new_group {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 400px;
+  height: 700%;
+  border: none ;
+  padding: 10px 5px;
+}
+.page-back {
+  font-size: 20px;
+  color: rgb(12, 158, 12);
+  text-decoration: none;
+}

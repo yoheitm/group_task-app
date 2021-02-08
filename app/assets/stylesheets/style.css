@@ -2,8 +2,8 @@
 
 .container {
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  flex-flow:column ;
+  justify-content:center ;
   align-items: center;
   overflow: scroll;
 }

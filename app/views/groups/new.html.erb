@@ -1,0 +1,22 @@
+<div class='shift-group-form'>
+  <h1>新規グループ</h1>
+  <%=form_with model: @group, id: 'new_group', class: 'new_group',local: true do |f|%>
+    <div class='field'>
+      <div class='field--label'>
+        <%= f.label :グループ名, class: 'shift-group-label'%>
+      </div>
+      <div class='field-input'>
+        <%= f.text_field :name, class: 'shift-group-name', placeholder: 'グループ名を入力してください'%>
+      </div>
+    </div>
+    <div class='field'>
+      <div class='field-label'>
+        <label class='shift-group-label' for='shift-group_member'>グループメンバー</label>
+      </div>
+    </div>
+    <div class='actions'>
+      <%= f.submit '作成',class: 'btn'%>
+    </div>
+  <% end %>
+  <%= link_to "トップページへ戻る", root_path, class: 'page-back'%>
+</div>

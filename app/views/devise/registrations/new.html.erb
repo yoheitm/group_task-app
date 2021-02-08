@@ -1,4 +1,3 @@
-<div class="contents row">
   <div class="container">
     <h1>アカウントを作成</h1>
     <%= form_with model: @user, url: user_registration_path, id: 'new_account', class: 'new_account', local: true do |f| %>
@@ -42,4 +41,3 @@
   <h4>すでにアカウントをお持ちですか？</h4>
   <%= link_to "サインイン",  new_user_session_path, class: 'new-sign-up'%>
   </div>
-</div>
