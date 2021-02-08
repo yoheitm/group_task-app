@@ -1,3 +1,8 @@
+<div class="header">
+  <div class="user-info">
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "user-info-image" %>
+  </div>
+</div>
 <div class="wrapper">
   <div class="side-bar">
     <%= render "side_bar" %>
