@@ -1,6 +1,7 @@
 <div class='shift-group-form'>
   <h1>新規グループ</h1>
   <%=form_with model: @group, id: 'new_group', class: 'new_group',local: true do |f|%>
+    <%= render 'layouts/error_messages', model: f.object %>
     <div class='field'>
       <div class='field--label'>
         <%= f.label :グループ名, class: 'shift-group-label'%>
