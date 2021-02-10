@@ -10,19 +10,11 @@
       </div>
     </div>
     <div class='field'>
-      <div class='field-label'>
-        <label class='shift-group-label' for='shift-group_member'>グループメンバー</label>
+      <div class='shift-group-name'>
+        <%= f.label :グループメンバー , class:'shift-group-label' %><br />
+        <%= f.collection_check_boxes(:user_ids, User.all, :id, :name) %>
       </div>
-      <div class='field-input'>
-        <select name="group[user_ids][]", class='shift-group-member'>
-          <option value="">参加するユーザーを選択してください</option>
-          <% User.where.not(id: current_user.id).each do |user| %>
-            <option value=<%= user.id %>><%= user.name %></option>
-          <% end %>
-        </select>
-        <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
-      </div>
-    </div>
+    </div>  
     <div class='actions'>
       <%= f.submit '作成',class: 'btn'%>
     </div>

@@ -7,8 +7,9 @@ class User < ApplicationRecord
   has_many :groups, through: :group_users
 
   with_options presence: true do
-    validates :name, :email
-    with_options format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ } do
+    validates :name 
+    validates :email
+    with_options format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/, message: '英数混合で6文字以上のパスワードを入力してください' } do
       validates :password
       validates :password_confirmation
     end
