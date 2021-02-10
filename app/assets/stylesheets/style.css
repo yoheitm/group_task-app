@@ -1,5 +1,10 @@
 /* リセットCSS */
 
+.error-message {
+  color: red;
+  font-size: 13px;
+}
+
 .container {
   display: flex;
   flex-flow:column ;
