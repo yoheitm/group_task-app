@@ -1,6 +1,19 @@
 <div class="side-bar-header">
-  <div class="header-name">
-    <a href="#">Tom</a>
+  <div class="header-user-info" id="lists">
+    <div class="user-info">
+      <% if current_user.image? %>
+        <%= image_tag current_user.image.thumb50.url %>
+      <% else %>
+        <%= image_tag "/assets/default.png", :size => '40x40' %>
+      <% end %>
+    </div>
+    <div class="header-name">
+      <%= current_user.name %>
+    </div>
+    <ul class="user-info-lists hidden" id="pull-down">
+        <li class="pull-down-list"><%= link_to 'ユーザー情報を編集', edit_user_registration_path, class: "user-info-bar"%></li>
+        <li class="pull-down-list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class: "user-info-bar"%></li>
+    </ul>
   </div>
   <div class="create-room">
     <%= link_to 'グループを作成', new_group_path %>

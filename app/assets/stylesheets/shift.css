@@ -1,9 +1,12 @@
-.header {
+.header-user-info {
   display: flex;
-  justify-content:flex-end;
-  background-color: hsl(120, 40%, 25%);
+  justify-content: center;
+  align-items: center;
   height: 40px;
-  width: 100vw;
+  background-color: rgb(52, 126, 77);
+  padding: 20px;
+  border-radius: 50%;
+  border: solid 1px rgb(102, 126, 103);
 }
 .user-info-image {
   text-decoration: none;
@@ -28,7 +31,7 @@
   align-items: center;
 }
 
-.header-name a{
+.header-name {
   font-size: 16px;
   color: #FAFAFA;
   text-decoration: none;
@@ -146,19 +149,21 @@
 
 .user-info-lists {
   width: 180x;
-  height: 70px;
   position: absolute;
-  right: 0px;
-  top: 40px;
-  padding: 10px;
-  background-color: white;
-  border: solid 1px darkred;
+  left: 5px;
+  top: 80px;
+  border: solid 1px rgb(3, 75, 9);
 }
 
 .user-info-bar {
   text-decoration: none;
-  color: darkred;
-  padding: 10px;
+  color: rgb(1, 51, 5);
+}
+
+.pull-down-list{
+  padding: 15px 35px 15px 15px;
+  border: 1px solid #eee;
+  background-color: white;
 }
 
 .hidden {

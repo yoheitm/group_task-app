@@ -1,16 +1,3 @@
-<div class="header">
-  <div class="user-info" id="lists">
-    <% if current_user.image? %>
-      <%= image_tag current_user.image.thumb50.url %>
-    <% else %>
-      <%= image_tag "/assets/default.png", :size => '40x40' %>
-    <% end %>
-    <ul class="user-info-lists hidden" id="pull-down">
-      <li><%= link_to 'ユーザー情報を編集', edit_user_registration_path, class: "user-info-bar"%></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class: "user-info-bar"%></li>
-    </ul>
-  </div>
-</div>
 <div class="wrapper">
   <div class="side-bar">
     <%= render "side_bar" %>
