@@ -5,3 +5,4 @@ ja:
        name: 名前
      group:
        name: グループ名
+       user_ids: グループメンバー

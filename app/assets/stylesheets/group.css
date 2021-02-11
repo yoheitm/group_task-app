@@ -16,6 +16,12 @@
   margin-bottom: 20px;
 }
 
+.shift-group-member {
+  height: 30px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
 .new_group {
   display: flex;
   flex-flow: column;
@@ -23,7 +29,6 @@
   align-items: center;
   background-color: white;
   width: 400px;
-  height: 700%;
   border: none ;
   padding: 10px 5px;
 }

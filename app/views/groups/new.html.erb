@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class='field'>
-      <div class='shift-group-name'>
+      <div class='shift-group-member'>
         <%= f.label :グループメンバー , class:'shift-group-label' %><br />
         <%= f.collection_check_boxes(:user_ids, User.all, :id, :name) %>
       </div>

@@ -1,7 +1,14 @@
 /* リセットCSS */
+.field_with_errors {
+  display: contents;
+}
 
+.error-alert {
+  background-color: rgb(255, 211, 211);
+  padding: 10px;
+}
 .error-message {
-  color: red;
+  color: rgb(138, 0, 0);
   font-size: 13px;
 }
 
