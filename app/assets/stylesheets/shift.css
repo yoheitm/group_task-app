@@ -1,15 +1,13 @@
 .header-user-info {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 40px;
   background-color: rgb(52, 126, 77);
   padding: 20px;
-  border-radius: 50%;
   border: solid 1px rgb(102, 126, 103);
 }
-.user-info-image {
-  text-decoration: none;
+.user-info-name {
+  margin-left: 5px;
   color: #FFFFFF;
 }
 
