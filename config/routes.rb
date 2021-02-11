@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   root to: 'shift#index'
-  resources :users, only: [:edit, :update]
   resources :groups, only: [:new, :create]
 end

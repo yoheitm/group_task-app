@@ -2,7 +2,8 @@
   display: flex;
   justify-content:flex-end;
   background-color: hsl(120, 40%, 25%);
-  height: 30px;
+  height: 40px;
+  width: 100vw;
 }
 .user-info-image {
   text-decoration: none;
@@ -141,4 +142,25 @@
   height: 50px;
   margin-left: 15px;
   padding: 0 20px;
+}
+
+.user-info-lists {
+  width: 180x;
+  height: 70px;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  padding: 10px;
+  background-color: white;
+  border: solid 1px darkred;
+}
+
+.user-info-bar {
+  text-decoration: none;
+  color: darkred;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
 }

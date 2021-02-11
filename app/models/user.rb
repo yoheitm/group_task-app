@@ -9,9 +9,9 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :name, :email
-    with_options format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ } do
-      validates :password
-      validates :password_confirmation
-    end
+  end
+  with_options presence: true, on: :create, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/ } do
+    validates :password
+    validates :password_confirmation
   end
 end
