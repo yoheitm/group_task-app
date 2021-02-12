@@ -1,11 +1,13 @@
-.header {
+.header-user-info {
   display: flex;
-  justify-content:flex-end;
-  background-color: hsl(120, 40%, 25%);
-  height: 30px;
+  align-items: center;
+  height: 40px;
+  background-color: rgb(52, 126, 77);
+  padding: 20px;
+  border: solid 1px rgb(102, 126, 103);
 }
-.user-info-image {
-  text-decoration: none;
+.user-info-name {
+  margin-left: 5px;
   color: #FFFFFF;
 }
 
@@ -21,36 +23,43 @@
   background-color: hsl(120, 40%, 25%);
   border: solid 1px hsl(120, 14%, 36%);
   height: 100px;
-  padding: 0 20px;
+  padding: 0 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.header-name a{
+.header-name {
   font-size: 16px;
   color: #FAFAFA;
   text-decoration: none;
 }
+.create-group {
+  height: 40px;
+  background-color: rgb(52, 126, 77);
+  border: 1px solid rgb(102, 126, 103);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.create-room a {
-  font-size: 10px;
-  border: 1px solid lightblue;
-  padding: 14px;
-  color: deepskyblue;
+.create-group a{
+  font-size: 12px;
+  color: white;
   text-decoration: none;
 }
-.rooms {
+.groups {
   background-color: hsl(120, 40%, 25%);
   height: calc(100vh - 100px);
   padding: 0 20px;
   overflow: scroll;
 }
-.room {
-  padding: 20px 0 40px;
+.group {
+  padding: 10px 0 30px;
 }
 
-.room-name a {
+.group-name a {
   text-decoration: none;
   color: white;
 }
@@ -141,4 +150,27 @@
   height: 50px;
   margin-left: 15px;
   padding: 0 20px;
+}
+
+.user-info-lists {
+  width: 180x;
+  position: absolute;
+  left: 5px;
+  top: 80px;
+  border: solid 1px rgb(3, 75, 9);
+}
+
+.user-info-bar {
+  text-decoration: none;
+  color: rgb(1, 51, 5);
+}
+
+.pull-down-list{
+  padding: 15px 35px 15px 15px;
+  border: 1px solid #eee;
+  background-color: white;
+}
+
+.hidden {
+  display: none;
 }

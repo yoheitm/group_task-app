@@ -10,6 +10,7 @@
 
 - has_many :group_users
 - has_many :messages
+- has_many :groups, through: :group_users
 
 ## groups
 
@@ -24,6 +25,7 @@
 - has_many :group_users
 - has_many :messages
 - has_one  :shift
+- has_many :users, through: :group_users
 
 ## group_users
 

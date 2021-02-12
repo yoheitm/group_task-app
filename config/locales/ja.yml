@@ -1,0 +1,8 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: 名前
+     group:
+       name: グループ名
+       user_ids: グループメンバー

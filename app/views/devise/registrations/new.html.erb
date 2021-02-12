@@ -1,45 +1,43 @@
-<div class="contents row">
-  <div class="container">
-    <h1>アカウントを作成</h1>
-    <%= form_with model: @user, url: user_registration_path, id: 'new_account', class: 'new_account', local: true do |f| %>
-     <%#= render 'shared/error_messages', model: f.object %>
-      <div class="field">
-        <div class='field-label'>
-          <%= f.label :名前 %>
-        </div>
-        <div class='field-input'>
-          <%= f.text_area :name, autofocus: true, class: 'text-area' %>
-        </div>
+<div class="container">
+  <h1>アカウントを作成</h1>
+  <%= form_with model: @user, url: user_registration_path, id: 'new_account', class: 'new_account', local: true do |f| %>
+    <%= render 'devise/shared/error_messages', model: f.object %>
+    <div class="field">
+      <div class='field-label'>
+        <%= f.label :名前 %>
       </div>
-      <div class="field">
-        <div class='field-label'>
-          <%= f.label :メールアドレス %>
-        </div>
-        <div class='field-input'>
-          <%= f.email_field :email, autofocus: true, class: 'text-area' %>
-        </div>
+      <div class='field-input'>
+        <%= f.text_area :name, autofocus: true, class: 'text-area' %>
       </div>
-      <div class='field'>
-        <div class='field-label'>
-          <%= f.label :パスワード %>
-        </div>
-        <div class='field-input'>
-          <%= f.password_field :password, autocomplete: "off", class: 'text-area', placeholder:"6文字以上の半角英数字" %>
-        </div>
+    </div>
+    <div class="field">
+      <div class='field-label'>
+        <%= f.label :メールアドレス %>
       </div>
-      <div class='field'>
-        <div class='field-label'>
-          <%= f.label :もう一度パスワードを入力してください %>
-        </div>
-        <div class='field-input'>
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'text-area' %>
-        </div>
+      <div class='field-input'>
+        <%= f.email_field :email, autofocus: true, class: 'text-area' %>
       </div>
-      <div class='actions'>
-        <%= f.submit "アカウントを作成", class: 'btn' %>
+    </div>
+    <div class='field'>
+      <div class='field-label'>
+        <%= f.label :パスワード %>
       </div>
-    <% end %>
-  <h4>すでにアカウントをお持ちですか？</h4>
-  <%= link_to "サインイン",  new_user_session_path, class: 'new-sign-up'%>
-  </div>
+      <div class='field-input'>
+        <%= f.password_field :password, autocomplete: "off", class: 'text-area', placeholder:"6文字以上の半角英数字" %>
+      </div>
+    </div>
+    <div class='field'>
+      <div class='field-label'>
+        <%= f.label :もう一度パスワードを入力してください %>
+      </div>
+      <div class='field-input'>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'text-area' %>
+      </div>
+    </div>
+    <div class='actions'>
+      <%= f.submit "アカウントを作成", class: 'btn' %>
+    </div>
+  <% end %>
+<h4>すでにアカウントをお持ちですか？</h4>
+<%= link_to "サインイン",  new_user_session_path, class: 'new-sign-up'%>
 </div>
