@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  before_action :set_group, only: [:edit, :update, :destroy, :drop]
+
   def index
   end
 
@@ -17,11 +19,9 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:id])
     @group.update(group_params)
     if @group.save
       redirect_to group_messages_path(@group)
@@ -31,13 +31,21 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    group = Group.find(params[:id])
-    group.destroy
+    @group.destroy
+    redirect_to root_path
+  end
+
+  def drop
+    @group.users.delete(current_user)
     redirect_to root_path
   end
 
   private
   def group_params
     params.require(:group).permit(:name, user_ids:[])
+  end
+
+  def set_group
+    @group = Group.find(params[:id])
   end
 end
