@@ -1,15 +1,24 @@
-<div class="message">
-  <div class="upper-message">
-    <div class="message-user">
-      <%= message.user.name %>
-    </div>
-    <div class="message-date">
-      <%= l message.created_at, format: :short %>
-    </div>
+<div class="message-frame">
+  <div class="message-user-image">
+    <% if message.user.image? %>
+      <%= image_tag message.user.image.url, :size => '40x40' %>
+    <% else %>
+      <%= image_tag "/assets/default.png", :size => '40x40' %>
+    <% end %>
   </div>
-  <div class="lower-message">
-    <div class="message-content">
-      <%= message.content %>
+  <div class="message">
+    <div class="upper-message">
+      <div class="message-user">
+        <%= message.user.name %>
+      </div>
+      <div class="message-date">
+        <%= l message.created_at, format: :short %>
+      </div>
+    </div>
+    <div class="lower-message">
+      <div class="message-content">
+        <%= message.content %>
+      </div>
     </div>
   </div>
 </div>

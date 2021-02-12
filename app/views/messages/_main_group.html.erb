@@ -1,13 +1,13 @@
-<div class="shift-header">
-  <div class="left-header">
+<div class="group-header">
+  <div class="left-header" id="group-info" >
     <div class="header-title">
       <%= @group.name %>
     </div>
-  </div>
-  <div class="right-header">
-    <div class="header-button">
-      <%= link_to "グループを退出する", group_path(@group), method: :delete %>
-    </div>
+    <ul class="group-info-lists hidden" id="group-pull-down">
+      <li class="pull-down-list"><%= link_to "グループを編集", edit_group_path(@group), class: "group-info-bar"%></li>
+      <li class="pull-down-list"><%= link_to "グループを削除", group_path(@group), method: :delete, class: "group-info-bar" %></li>
+      <li class="pull-down-list"><%= link_to "グループを退室", "#", class: "group-info-bar" %></li>
+    </ul>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
 
 <%= form_with model: [@group, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
-    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
+    <%= f.text_field :content, class: 'form-message', placeholder: 'メッセージを入力' %>
   </div>
-  <%= f.submit '送信', class: 'form-submit' %>
+  <%= f.submit '送信', class: 'form-submit', id: "submit-btn" %>
 <% end %>

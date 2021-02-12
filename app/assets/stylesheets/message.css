@@ -19,6 +19,10 @@
   width: 300px;
   height: 100vh;
 }
+.group {
+  width: calc(100vw - 300px);
+  height: 100vh;
+}
 
 .side-bar-header {
   background-color: hsl(120, 40%, 25%);
@@ -57,8 +61,8 @@
   padding: 0 20px;
   overflow: scroll;
 }
-.group {
-  padding: 10px 0 30px;
+.group-link {
+  padding: 10px 0 20px;
 }
 
 .group-name a {
@@ -70,16 +74,23 @@
   background-color: #FFFFFF;
   width: calc(100vw - 300px);
 }
-.shift-header {
+.group-header {
   height: 100px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.left-header {
+  padding: 5px 20px;
+  border: solid 1px hsl(120, 24%, 34%);
+  background-color: hsl(120, 40%, 25%);
 }
 .header-title {
-  color: #333;
+  color: white;
   font-size: 24px;
-  margin-top: 36px;
+  font-family: monospace;
 }
 
 .header-button {
@@ -94,13 +105,16 @@
 }
 .messages {
   background-color: #ffffff;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 100px - 60px);
   border: solid 1px hsl(0, 0%, 91%);
-  padding: 40px 40px 0;
+  padding: 20px 10px 0;
   overflow: scroll;
 }
+.message-frame {
+  display: flex;
+}
 .message {
-  margin: 10px 0 0 0;
+  margin-left: 10px;
 }
 
 .upper-message{
@@ -109,7 +123,8 @@
 
 .message-user {
   color: #434a54;
-  font-size: 16px;
+  font-size: 12px;
+  font-family: monospace;
 }
 
 .message-date {
@@ -119,38 +134,42 @@
 }
 
 .lower-message {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .message-content {
   color: #434a54;
-  font-size: 14px;
-  margin-bottom: 40px;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 .form {
   background-color: #ffffff;
-  height: 90px;
-  padding: 20px 40px;
+  height: 60px;
+  padding: 5px 20px;
   display: flex;
+  align-items: center;
 }
 .form-input {
   background-color: white;
+  display: flex;
   width: 100%;
 }
 
 .form-message {
   border: none;
-  height: 50px;
+  height: 40px;
   width: 100%;
   padding-left: 10px;
+  border: solid 1px rgb(219, 219, 219);
 }
 
 .form-submit {
-  background-color: #38AEF0;
+  background-color: #6e396e;
   border: none;
   color: white;
   font-size: 16px;
-  height: 50px;
+  font-family: monospace;
+  height: 40px;
   margin-left: 15px;
   padding: 0 20px;
 }
@@ -175,6 +194,18 @@
 }
 .pull-down-list a{
   font-family: monospace;
+}
+
+.group-info-lists {
+  width: 180x;
+  position: absolute;
+  left: 330px;
+  top: 80px;
+  border: solid 1px rgb(181, 201, 182);
+}
+.group-info-bar {
+  text-decoration: none;
+  color: rgb(1, 51, 5);
 }
 
 .hidden {
