@@ -6,6 +6,7 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
   has_many :group_users
   has_many :groups, through: :group_users
+  has_many :messages
 
   with_options presence: true do
     validates :name, :email
