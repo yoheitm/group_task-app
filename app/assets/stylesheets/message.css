@@ -76,20 +76,20 @@
 }
 .group-header {
   height: 100px;
-  padding: 0 40px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .left-header {
-  padding: 5px 20px;
+  padding: 20px 20px;
   border: solid 1px hsl(120, 24%, 34%);
   background-color: hsl(120, 40%, 25%);
 }
 .header-title {
   color: white;
-  font-size: 24px;
+  font-size: 30px;
   font-family: monospace;
 }
 
@@ -199,8 +199,8 @@
 .group-info-lists {
   width: 180x;
   position: absolute;
-  left: 330px;
-  top: 80px;
+  left: 350px;
+  top: 90px;
   border: solid 1px rgb(181, 201, 182);
 }
 .group-info-bar {
