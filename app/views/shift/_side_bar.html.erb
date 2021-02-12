@@ -15,8 +15,8 @@
         <li class="pull-down-list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class: "user-info-bar"%></li>
     </ul>
   </div>
-  <div class="create-room">
-    <%= link_to 'グループを作成', new_group_path %>
+  <div class="create-group" id="new-group-button">
+    <%= link_to 'グループ作成', new_group_path %>
   </div>
 </div>
 
@@ -24,7 +24,7 @@
   <% current_user.groups.each do |group| %>
     <div class="group">
       <div class="group-name">
-        <a href="#"><%= group.name %></a>
+        <a href="#" class="group-link-button"><%="◯ #{group.name}" %></a>
       </div>
     </div>
   <% end %>

@@ -17,9 +17,10 @@
 }
 
 .shift-group-member {
-  height: 30px;
+  height: 80px;
   width: 350px;
   margin-bottom: 20px;
+  overflow: scroll;
 }
 
 .new_group {
