@@ -20,15 +20,12 @@
   </div>
 </div>
 
-<div class="rooms">
-  <div class="room">
-    <div class="room-name">
-      <a href="#">techroom1</a>
+<div class="groups">
+  <% current_user.groups.each do |group| %>
+    <div class="group">
+      <div class="group-name">
+        <a href="#"><%= group.name %></a>
+      </div>
     </div>
-  </div>
-  <div class="room">
-    <div class="room-name">
-      <a href="#">techroom2</a>
-    </div>
-  </div>
+  <% end %>
 </div>
