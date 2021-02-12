@@ -9,6 +9,7 @@
 .user-info-name {
   margin-left: 5px;
   color: #FFFFFF;
+  font-family: monospace;
 }
 
 .wrapper {
@@ -48,6 +49,7 @@
   font-size: 12px;
   color: white;
   text-decoration: none;
+  font-family: monospace;
 }
 .groups {
   background-color: hsl(120, 40%, 25%);
@@ -62,6 +64,7 @@
 .group-name a {
   text-decoration: none;
   color: white;
+  font-family: monospace;
 }
 .shift {
   background-color: #FFFFFF;
@@ -169,6 +172,9 @@
   padding: 15px 35px 15px 15px;
   border: 1px solid #eee;
   background-color: white;
+}
+.pull-down-list a{
+  font-family: monospace;
 }
 
 .hidden {
