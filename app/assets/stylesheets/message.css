@@ -82,6 +82,9 @@
   margin: 15px 0 15px;
   border: solid 1px hsl(120, 14%, 36%);
   padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .group-internal {
   padding: 10px 15px 20px;

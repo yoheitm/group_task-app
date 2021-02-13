@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update, :destroy, :drop]
 
   def index
-    @groups = Group.all
+    @groups = Group.all.order(id: "DESC")
   end
 
   def new
