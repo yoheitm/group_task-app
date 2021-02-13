@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>サインイン</h1>
+  <h1>ログイン</h1>
   <div class=flame-form>
   <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_account', local: true do |f| %>
     <div class='error-message'>
@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class='actions'>
-      <%= f.submit "サインイン", class: 'btn' %>
+      <%= f.submit "ログイン", class: 'btn' %>
     </div>
   <% end %>
   </div>

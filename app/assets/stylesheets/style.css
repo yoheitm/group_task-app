@@ -4,12 +4,13 @@
 }
 
 .error-alert {
-  background-color: rgb(255, 211, 211);
+  background-color: rgb(255, 225, 225);
   padding: 10px;
-  border-radius: 10%;
+  border: solid 1px rgb(255, 139, 139);
+  margin-bottom: 20px;
 }
 .error-message {
-  color: rgb(138, 0, 0);
+  color: rgb(182, 3, 3);
   font-size: 13px;
   font-family: monospace;
 }
@@ -35,10 +36,12 @@ h1 {
   font-size: 40px;
   font-family: monospace;
   color: rgb(12, 158, 12);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .flame-form {
   background-color: rgb(247, 247, 247);
+  border: solid 3px rgb(200, 200, 200);
+  border-radius: 10%;
 }
 
 .new_user {
