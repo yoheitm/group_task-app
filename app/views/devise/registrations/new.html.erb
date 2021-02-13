@@ -1,5 +1,6 @@
 <div class="container">
-  <h1>アカウントを作成</h1>
+<h1>アカウントを作成</h1>
+  <div class="flame-form">
   <%= form_with model: @user, url: user_registration_path, id: 'new_account', class: 'new_account', local: true do |f| %>
     <%= render 'devise/shared/error_messages', model: f.object %>
     <div class="field">
@@ -38,6 +39,7 @@
       <%= f.submit "アカウントを作成", class: 'btn' %>
     </div>
   <% end %>
+  </div>
 <h4>すでにアカウントをお持ちですか？</h4>
-<%= link_to "サインイン",  new_user_session_path, class: 'new-sign-up'%>
+<%= link_to "サインイン",  new_user_session_path, class: 'user-session-link'%>
 </div>

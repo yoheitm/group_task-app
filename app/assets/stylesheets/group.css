@@ -1,19 +1,18 @@
 .shift-group-form {
+  padding: 100px;
   display: flex;
-  flex-flow:column ;
+  flex-flow: column;
   justify-content:center ;
   align-items: center;
   overflow: scroll;
-}
-.shift-group-label {
-  color: rgb(61, 61, 61);
-  font-size: 15px;
+  background-color: white;
 }
 
 .shift-group-name {
   height: 30px;
   width: 350px;
   margin-bottom: 20px;
+  font-family: monospace;
 }
 
 .shift-group-member {
@@ -21,6 +20,9 @@
   width: 350px;
   margin-bottom: 20px;
   overflow: scroll;
+  font-family: monospace;
+  font-size: 15px;
+  color: rgb(68, 68, 68);
 }
 
 .new_group {
@@ -28,13 +30,14 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
   width: 400px;
   border: none ;
-  padding: 10px 5px;
+  padding: 30px 10px;
 }
 .page-back {
-  font-size: 20px;
+  font-size: 25px;
   color: rgb(12, 158, 12);
   text-decoration: none;
+  font-family: monospace;
+  margin-top: 20px;
 }

@@ -6,10 +6,12 @@
 .error-alert {
   background-color: rgb(255, 211, 211);
   padding: 10px;
+  border-radius: 10%;
 }
 .error-message {
   color: rgb(138, 0, 0);
   font-size: 13px;
+  font-family: monospace;
 }
 
 .icon_image {
@@ -25,11 +27,18 @@
   justify-content:center ;
   align-items: center;
   overflow: scroll;
+  padding: 30px;
+  background-color: white;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 40px;
+  font-family: monospace;
   color: rgb(12, 158, 12);
+  margin-bottom: 40px;
+}
+.flame-form {
+  background-color: rgb(247, 247, 247);
 }
 
 .new_user {
@@ -37,7 +46,7 @@ h1 {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 400px;
   height: 350px;
   border: none ;
@@ -45,14 +54,16 @@ h1 {
 }
 
 .field-label {
-  color: rgb(61, 61, 61);
+  color: rgb(85, 85, 85);
   font-size: 15px;
+  font-family: monospace;
 }
 
 .text-area {
   height: 30px;
   width: 350px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-family: monospace;
 }
 
 .btn {
@@ -61,25 +72,24 @@ h1 {
   color: white;
   background-color: rgb(12, 158, 12);
   border: none;
-  font-size: 15px;
+  font-size: 20px;
+  font-family: monospace;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
 h4 {
   color: rgb(61, 61, 61);
+  font-family: monospace;
+  font-size: 20px;
+  margin: 10px 0;
 }
 
-.new-sign-up {
+.user-session-link {
   font-size: 20px;
   color: rgb(12, 158, 12);
   text-decoration: none;
-}
-.top-page-back a{
-  font-size: 20px;
-  color: rgb(12, 158, 12);
-  text-decoration: none;
-  padding: 0 0 0 90px;
+  font-family: monospace;
 }
 
 .new_account {
@@ -87,9 +97,7 @@ h4 {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
   width: 400px;
   height: 700%;
-  border: none ;
   padding: 10px 5px;
 }

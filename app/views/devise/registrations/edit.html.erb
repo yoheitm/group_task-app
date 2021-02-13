@@ -1,5 +1,6 @@
 <div class="container">
   <h1>アカウントを編集</h1>
+  <div class="flame-form">
   <%= form_with model: @user, url: user_registration_path, id: 'new_account', class: 'new_account', local: true do |f| %>
     <%= render 'devise/shared/error_messages', model: f.object %>
     <% if @user.image? %>
@@ -12,7 +13,7 @@
         <%= f.label :プロフィール画像 %>
       </div>
       <div class="field-input">
-        <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+        <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: 'text-area' %>
       </div>
     </div>
     <div class="field">
@@ -43,7 +44,7 @@
       <div class='field-label'>
         <%= f.label :パスワード変更 %><i> (変更したい場合)</i>
       </div>
-      <div class='field-label'>
+      <div class='field-input'>
         <%= f.password_field :password, autocomplete: "off", class: 'text-area', placeholder:"6文字以上の半角英数字" %>
       </div>
     <div class="field">
@@ -58,7 +59,8 @@
       <%= f.submit "アカウントを更新", class: 'btn' %>
     </div>
   <% end %>
-  <div class='top-page-back'>
-    <%= link_to "トップページへ戻る",  root_path %>
   </div>
+</div>
+<div class='top-page-back'>
+  <%= link_to "トップページへ戻る",root_path , class: "user-session-link"%>
 </div>

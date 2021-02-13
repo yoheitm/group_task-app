@@ -1,9 +1,10 @@
 <div class='shift-group-form'>
   <h1>新規グループ</h1>
+  <div class="flame-form">
   <%=form_with model: @group, id: 'new_group', class: 'new_group',local: true do |f|%>
     <%= render 'layouts/error_messages', model: f.object %>
     <div class='field'>
-      <div class='field--label'>
+      <div class='field-label'>
         <%= f.label :グループ名, class: 'shift-group-label'%>
       </div>
       <div class='field-input'>
@@ -20,5 +21,6 @@
       <%= f.submit '作成',class: 'btn'%>
     </div>
   <% end %>
+  </div>
   <%= link_to "トップページへ戻る", root_path, class: 'page-back'%>
 </div>
