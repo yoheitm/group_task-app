@@ -110,8 +110,9 @@
   align-items: center;
 }
 .drop-icon {
-  background-color: hsl(0, 74%, 71%);
+  background-color: hsl(0, 100%, 77%);
   border-radius: 50%;
+  padding: 1px;
 }
 
 .group-member-count {
@@ -143,8 +144,9 @@
   align-items: center;
 }
 .join-icon {
-  background-color: hsl(143, 52%, 64%);
+  background-color: hsl(143, 89%, 75%);
   border-radius: 50%;
+  padding: 1px;
 }
 
 .group-header {
