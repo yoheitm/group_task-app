@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :meetings
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
   root to: 'groups#index'
   resources :groups, only: [:new, :create, :edit, :update, :destroy] do
