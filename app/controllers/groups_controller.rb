@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update, :destroy, :drop]
 
   def index
+    @groups = Group.all
   end
 
   def new
@@ -38,6 +39,12 @@ class GroupsController < ApplicationController
   def drop
     @group.users.delete(current_user)
     redirect_to root_path
+  end
+
+  def join
+    @group = Group.find_by(id: params[:id])
+    @group.users << current_user
+    redirect_to group_messages_path(@group)
   end
 
   private

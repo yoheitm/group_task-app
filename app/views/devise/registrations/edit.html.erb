@@ -5,7 +5,7 @@
     <% if @user.image? %>
       <%= image_tag @user.image.url, :size => '100x100' %>
     <% else %>
-      <%= image_tag "/assets/default.png", :size => '100x100' %>
+      <%= image_tag "/assets/defaulticon.png", :size => '100x100' %>
     <% end %>
     <div class="field">
       <div class='field-label'>
@@ -58,5 +58,7 @@
       <%= f.submit "アカウントを更新", class: 'btn' %>
     </div>
   <% end %>
-<%= link_to "トップページへ戻る",  root_path, class: 'new-sign-up'%>
+  <div class='top-page-back'>
+    <%= link_to "トップページへ戻る",  root_path %>
+  </div>
 </div>

@@ -1,12 +1,12 @@
 <div class="group-header">
-  <div class="left-header" id="group-info" >
-    <div class="header-title">
-      <%= @group.name %>
-    </div>
+  <div class="header-title">
+    <%= @group.name %>
+  </div>
+  <div class="group-edit-button" id="group-info">
+    <%= image_tag 'arrow_top.png' %>
     <ul class="group-info-lists hidden" id="group-pull-down">
       <li class="pull-down-list"><%= link_to "グループを編集", edit_group_path(@group), class: "group-info-bar"%></li>
       <li class="pull-down-list"><%= link_to "グループを削除", group_path(@group), method: :delete, class: "group-info-bar" %></li>
-      <li class="pull-down-list"><%= link_to "グループを退室", drop_group_path(@group), method: :delete, class: "group-info-bar" %></li>
     </ul>
   </div>
 </div>

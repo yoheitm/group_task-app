@@ -6,5 +6,8 @@ Rails.application.routes.draw do
     member do
       delete 'drop'
     end
+    member do
+      post 'join'
+    end
   end
 end
