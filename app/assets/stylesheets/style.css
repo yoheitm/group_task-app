@@ -75,6 +75,12 @@ h4 {
   color: rgb(12, 158, 12);
   text-decoration: none;
 }
+.top-page-back a{
+  font-size: 20px;
+  color: rgb(12, 158, 12);
+  text-decoration: none;
+  padding: 0 0 0 90px;
+}
 
 .new_account {
   display: flex;

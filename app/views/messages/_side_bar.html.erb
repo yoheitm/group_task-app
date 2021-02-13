@@ -1,19 +1,22 @@
 <div class="side-bar-header">
   <div class="header-user-info" id="lists">
-    <div class="user-info-image">
-      <% if current_user.image? %>
-        <%= image_tag current_user.image.thumb50.url %>
-      <% else %>
-        <%= image_tag "/assets/default.png", :size => '30x30' %>
-      <% end %>
-    </div>
-    <div class="user-info-name">
-      <%= current_user.name %>
+    <div class="user-info">
+      <div class="user-info-image">
+        <% if current_user.image? %>
+          <%= image_tag current_user.image.thumb50.url %>
+        <% else %>
+          <%= image_tag "/assets/defaulticon.png", :size => '30x30' %>
+        <% end %>
+      </div>
+      <div class="user-info-name">
+        <%= current_user.name %>
+      </div>
     </div>
     <ul class="user-info-lists hidden" id="pull-down">
         <li class="pull-down-list"><%= link_to 'ユーザー情報を編集', edit_user_registration_path, class: "user-info-bar"%></li>
         <li class="pull-down-list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete,class: "user-info-bar"%></li>
     </ul>
+    <%= image_tag 'arrow_top.png' %>
   </div>
   <div class="create-group" id="new-group-button">
     <%= link_to 'グループ作成', new_group_path %>
@@ -21,11 +24,38 @@
 </div>
 
 <div class="groups">
+  <h3 class="group-contents" id="internal-lists">▼ グループ</h3>
+  <div class="group-add-list" id="group-internal-pull-down">
   <% current_user.groups.each do |group| %>
-    <div class="group-link">
-      <div class="group-name">
-        <%= link_to "◯ #{group.name}", group_messages_path(group), class:"group-link-button" %>
+    <div class="group-internal">
+      <div class="group-internal-name">
+        <%= link_to "#{group.name}", group_messages_path(group), class:"group-link-button" %>
+        <div class="group-internal-info">
+          <div class="group-member-count">
+            <%= group.users.count %><%= image_tag 'userpulldown.png',size: '13x13' %>
+          </div>
+          <%= link_to image_tag("remove-icon.png",:size => '30x30', class: "drop-icon"), drop_group_path(group), method: :delete, class: "group-drop" %>
+        </div>
       </div>
     </div>
   <% end %>
+  </div>
+  <h3 class="group-contents" id="external-lists">＋ グループを追加</h3>
+  <div class="group-add-list hidden" id="group-external-pull-down">
+  <% @groups.each do |group|%>
+    <% unless current_user.groups.include?(group) %>
+      <div class="group-external">
+        <div class="group-external-name">
+          <%= group.name %>
+        </div>
+        <div class="group-external-info">
+          <div class="group-member-count">
+            <%= group.users.count %><%= image_tag 'userpulldown.png',size: '13x13' %>
+          </div>
+          <%= link_to image_tag("plus-icon.png",:size => '30x30', class: "join-icon"), join_group_path(group), method: :post, class: "group-join" %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
 </div>

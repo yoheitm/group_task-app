@@ -1,16 +1,3 @@
-.header-user-info {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  background-color: rgb(52, 126, 77);
-  padding: 20px;
-  border: solid 1px rgb(102, 126, 103);
-}
-.user-info-name {
-  margin-left: 5px;
-  color: #FFFFFF;
-  font-family: monospace;
-}
 
 .wrapper {
   display: flex;
@@ -27,85 +14,183 @@
 .side-bar-header {
   background-color: hsl(120, 40%, 25%);
   border: solid 1px hsl(120, 14%, 36%);
-  height: 100px;
-  padding: 0 5px;
+  height: 70px;
+  padding: 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.header-name {
-  font-size: 16px;
-  color: #FAFAFA;
-  text-decoration: none;
+.header-user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: calc(300px - 100px);
+  background-color: rgb(52, 126, 77);
+  padding: 20px 7px 20px 0;
+  border: solid 1px rgb(102, 126, 103);
 }
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.user-info-lists {
+  width: 180x;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  border: solid 1px rgb(3, 75, 9);
+}
+.user-info-image {
+  margin-left: 5px;
+}
+.user-info-name {
+  margin-left: 5px;
+  color: #FFFFFF;
+  font-family: monospace;
+  font-size: 14px;
+}
+
 .create-group {
   height: 40px;
   background-color: rgb(52, 126, 77);
   border: 1px solid rgb(102, 126, 103);
-  padding: 20px;
+  padding: 20px 0;
+  width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .create-group a{
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   text-decoration: none;
   font-family: monospace;
 }
 .groups {
   background-color: hsl(120, 40%, 25%);
-  height: calc(100vh - 100px);
-  padding: 0 20px;
+  height: calc(100vh - 70px);
+  padding: 0 10px;
   overflow: scroll;
 }
-.group-link {
-  padding: 10px 0 20px;
+.group-contents {
+  font-size: 15px;
+  font-family: monospace;
+  color: #FFFFFF;
+  background-color: rgb(52, 126, 77);
+  margin: 15px 0 15px;
+  border: solid 1px hsl(120, 14%, 36%);
+  padding: 10px 10px;
 }
-
-.group-name a {
+.group-internal {
+  padding: 10px 15px 20px;
+}
+.group-internal-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.group-link-button {
   text-decoration: none;
   color: white;
   font-family: monospace;
+  font-size: 13px;
 }
-.shift {
+.group-internal-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.group-drop {
+  display: flex;
+  align-items: center;
+}
+.drop-icon {
+  background-color: hsl(0, 74%, 71%);
+  border-radius: 50%;
+}
+
+.group-member-count {
+  color: rgb(199, 199, 199);
+  font-size: 12px;
+  font-family: monospace;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.group-external {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 20px;
+}
+.group-external-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.group-external-name {
+  color: white;
+  font-family: monospace;
+  font-size: 13px;
+}
+.group-join {
+  display: flex;
+  align-items: center;
+}
+.join-icon {
+  background-color: hsl(143, 52%, 64%);
+  border-radius: 50%;
+}
+
+.group-header {
   background-color: #FFFFFF;
   width: calc(100vw - 300px);
-}
-.group-header {
-  height: 100px;
-  padding: 0 10px;
+  height: 70px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.left-header {
-  padding: 20px 20px;
-  border: solid 1px hsl(120, 24%, 34%);
-  background-color: hsl(120, 40%, 25%);
-}
 .header-title {
-  color: white;
+  color: #277224;
   font-size: 30px;
   font-family: monospace;
 }
-
-.header-button {
-  margin-top: 40px;
+.group-edit-button {
+  margin-left: 20px;
+  padding: 20px 20px;
+  background-color: #5aa357;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  position: relative;
 }
-
-.header-button a {
+.pull-down-list{
+  padding: 15px 35px 15px 15px;
+  border: 1px solid #eee;
+  background-color: white;
+}
+.pull-down-list a{
+  font-family: monospace;
+}
+.group-info-lists {
+  width: 180px;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  border: solid 1px rgb(181, 201, 182);
+}
+.group-info-bar {
   text-decoration: none;
-  border: 1px solid darkred;
-  color: darkred;
-  padding: 20px;
+  color: rgb(1, 51, 5);
 }
+
 .messages {
   background-color: #ffffff;
-  height: calc(100vh - 100px - 60px);
+  height: calc(100vh - 70px - 60px);
   border: solid 1px hsl(0, 0%, 91%);
   padding: 20px 10px 0;
   overflow: scroll;
@@ -183,27 +268,6 @@
 }
 
 .user-info-bar {
-  text-decoration: none;
-  color: rgb(1, 51, 5);
-}
-
-.pull-down-list{
-  padding: 15px 35px 15px 15px;
-  border: 1px solid #eee;
-  background-color: white;
-}
-.pull-down-list a{
-  font-family: monospace;
-}
-
-.group-info-lists {
-  width: 180x;
-  position: absolute;
-  left: 350px;
-  top: 90px;
-  border: solid 1px rgb(181, 201, 182);
-}
-.group-info-bar {
   text-decoration: none;
   color: rgb(1, 51, 5);
 }
