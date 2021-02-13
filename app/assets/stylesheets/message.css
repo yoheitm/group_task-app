@@ -155,7 +155,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: auto;
+  overflow:initial
 }
 .header-left {
   display: flex;
