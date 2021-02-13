@@ -24,7 +24,7 @@
 </div>
 
 <div class="groups">
-  <h3 class="group-contents" id="internal-lists">▼ グループ</h3>
+  <h3 class="group-contents" id="internal-lists">▼ グループ<%= image_tag 'arrow_top.png' %></h3>
   <div class="group-add-list" id="group-internal-pull-down">
   <% current_user.groups.each do |group| %>
     <div class="group-internal">
@@ -40,7 +40,7 @@
     </div>
   <% end %>
   </div>
-  <h3 class="group-contents" id="external-lists">＋ グループを追加</h3>
+  <h3 class="group-contents" id="external-lists">＋ グループを追加<%= image_tag 'arrow_top.png' %></h3>
   <div class="group-add-list hidden" id="group-external-pull-down">
   <% @groups.each do |group|%>
     <% unless current_user.groups.include?(group) %>
