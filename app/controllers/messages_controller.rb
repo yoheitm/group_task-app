@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
     @group = Group.find(params[:group_id])
     @groups = Group.all.order(id: "DESC")
     @messages = @group.messages.includes(:user)
+    @meeting = @group.meeting
   end
 
   def create

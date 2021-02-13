@@ -155,11 +155,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: auto;
 }
-
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .header-title {
   color: #277224;
-  font-size: 30px;
+  font-size: 25px;
   font-family: monospace;
 }
 .group-edit-button {
@@ -191,9 +196,34 @@
   color: rgb(1, 51, 5);
 }
 
+.schedule {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+.schedule-new{
+  color: #6e396e;
+  font-family: monospace;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: white;
+  padding: 2px 2px;
+  border: solid 2px #6e396e;
+}
+.schedule-existing{
+  color: white;
+  font-family: monospace;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #6e396e;
+  padding: 2px 2px;
+  border: solid 2px #6e396e;
+}
+
 .messages {
   background-color: #ffffff;
-  height: calc(100vh - 70px - 60px);
+  height: calc(100vh - 130px);
   border: solid 1px hsl(0, 0%, 91%);
   padding: 20px 10px 0;
   overflow: scroll;

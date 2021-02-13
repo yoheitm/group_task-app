@@ -1,6 +1,15 @@
 <div class="group-header">
-  <div class="header-title">
-    <%= @group.name %>
+  <div class="header-left">
+    <div class="header-title">
+      <%= @group.name %>
+    </div>
+    <div class="schedule" id="schedule-btn">
+    <% if @group.meeting.blank? %>
+      <%= link_to "スケジュール作成", new_group_meeting_path(@group), class: "schedule-new" %>
+    <% else %>
+      <%= link_to "スケジュール確認", group_meetings_path(@group), class: "schedule-existing" %>
+    <% end %>
+    </div>
   </div>
   <div class="group-edit-button" id="group-info">
     <%= image_tag 'arrow_top.png' %>
