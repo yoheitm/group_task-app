@@ -110,7 +110,7 @@
   align-items: center;
 }
 .drop-icon {
-  background-color: hsl(0, 100%, 77%);
+  background-color: hsl(0, 100%, 67%);
   border-radius: 50%;
   padding: 1px;
 }
@@ -144,7 +144,7 @@
   align-items: center;
 }
 .join-icon {
-  background-color: hsl(143, 89%, 75%);
+  background-color: hsl(143, 100%, 64%);
   border-radius: 50%;
   padding: 1px;
 }
