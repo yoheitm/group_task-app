@@ -11,3 +11,6 @@ ja:
      group:
        name: グループ名
        user_ids: グループメンバー
+     meeting:
+       title: タイトル
+       content: 詳細

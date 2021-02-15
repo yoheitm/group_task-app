@@ -2,12 +2,17 @@
   <div class="header-title">
     <%= @group.name %>
   </div>
-  <div class="group-edit-button" id="group-info">
-    <%= image_tag 'arrow_top.png' %>
-    <ul class="group-info-lists hidden" id="group-pull-down">
-      <li class="pull-down-list"><%= link_to "グループを編集", edit_group_path(@group), class: "group-info-bar"%></li>
-      <li class="pull-down-list"><%= link_to "グループを削除", group_path(@group), method: :delete, class: "group-info-bar" %></li>
-    </ul>
+  <div class="header-right">
+     <div class="schedule" >
+        <%= link_to "スケジュールを開く", group_meetings_path(@group), id: "schedule-btn" %>
+    </div>
+    <div class="group-edit-button" id="group-info">
+      <%= image_tag 'arrow_top.png' %>
+      <ul class="group-info-lists hidden" id="group-pull-down">
+        <li class="pull-down-list"><%= link_to "グループを編集", edit_group_path(@group), class: "group-info-bar"%></li>
+        <li class="pull-down-list"><%= link_to "グループを削除", group_path(@group), method: :delete, data: { confirm: '本当にグループを削除しますか?' } ,class: "group-info-bar" %></li>
+      </ul>
+    </div>
   </div>
 </div>
 

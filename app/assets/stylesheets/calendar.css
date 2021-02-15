@@ -1,0 +1,24 @@
+.calendar-title {
+  font-family: monospace;
+  font-size: 20px;
+  color: #434a54;
+}
+.calendar-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar-slide {
+  font-family: monospace;
+  text-decoration: none;
+  font-size: 20px;
+  color: #5aa357;
+  border: solid 1px #5aa357;
+  border-radius: 1mm;
+  padding: 0 2px;
+}
+.table {
+  font-family: monospace;
+  color: #434a54;
+  font-size: 12px;
+}

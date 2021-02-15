@@ -41,7 +41,7 @@ h1 {
 .flame-form {
   background-color: rgb(247, 247, 247);
   border: solid 3px rgb(200, 200, 200);
-  border-radius: 10%;
+  border-radius: 10mm;
 }
 
 .new_user {
@@ -79,6 +79,7 @@ h1 {
   font-family: monospace;
   margin-top: 30px;
   margin-bottom: 10px;
+  border-radius: 2mm;
 }
 
 h4 {
@@ -103,4 +104,12 @@ h4 {
   width: 400px;
   height: 700%;
   padding: 10px 5px;
+}
+
+.time-field-input {
+  font-family: monospace;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 350px;
+  font-size: 19px;
 }

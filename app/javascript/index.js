@@ -102,10 +102,17 @@ function pull (){
     }
   });
   groupInfo.addEventListener("mouseover", () => {
-    groupInfo.setAttribute("style","background-color:rgb(0, 95, 48);")
+    groupInfo.setAttribute("style","background-color:#31722f;")
   });
   groupInfo.addEventListener("mouseout", () => {
-    groupInfo.removeAttribute("style","background-color:rgb(0, 95, 48);")
+    groupInfo.removeAttribute("style","background-color:#31722f;")
+  });
+  const scheduleBtn = document.getElementById("schedule-btn");
+  scheduleBtn.addEventListener("mouseover", () => {
+    scheduleBtn.setAttribute("style","background-color:#4e214e;")
+  });
+  scheduleBtn.addEventListener("mouseout", () => {
+    scheduleBtn.removeAttribute("style","background-color:#4e214e;")
   });
   
   const submitBtn = document.getElementById("submit-btn");

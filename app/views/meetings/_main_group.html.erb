@@ -1,0 +1,52 @@
+<div class="group-header">
+  <div class="header-title">
+    <%= @group.name %>
+  </div>
+  <div class="header-right">
+     <div class="schedule" >
+        <%= link_to "メッセージを開く", group_messages_path(@group), id: "schedule-btn" %>
+    </div>
+    <div class="group-edit-button" id="group-info">
+      <%= image_tag 'arrow_top.png' %>
+      <ul class="group-info-lists hidden" id="group-pull-down">
+        <li class="pull-down-list"><%= link_to "グループを編集", edit_group_path(@group), class: "group-info-bar"%></li>
+        <li class="pull-down-list"><%= link_to "グループを削除", group_path(@group), method: :delete, data: { confirm: '本当にグループを削除しますか?' } ,class: "group-info-bar" %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="meetings">
+  <div class="events-field">
+    <div class="event-lists" id="event-lists">
+      <span class="event-lists-a">イベントを見る</span>
+      <%= image_tag 'arrow_top.png' %>
+    </div>
+    <div class="events hidden" id="events">
+      <% @meetings.each do |meeting| %>
+       <div class="event">
+          <%= image_tag 'event.png', size: '25x25' %>
+          <span class="event-info"><%= l meeting.start_time, format: :short %></span>
+          <span class="event-info"><%= meeting.title %></span>
+          <%= link_to '詳細', group_meeting_path(@group, meeting.id), class: "event-menu" %>
+          <%= link_to '編集', edit_group_meeting_path(@group, meeting.id), class: "event-menu" %>
+          <%= link_to '削除', group_meeting_path(@group, meeting.id), method: :delete, data: { confirm: '本当にイベントを削除しますか?' }, class: "event-menu" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="new-meeting" id="new-meeting-btn">
+      <%= link_to '新規イベント', new_group_meeting_path(@group) %>
+    </div>
+  </div>
+  <div class="calendar">
+    <%= month_calendar events: @meetings do |date, meetings| %>
+      <%= date.day %>
+      <% meetings.each do |meeting| %>
+      <div class="event-tag">
+        <%= image_tag 'event.png', size: '20x20' %>
+        <%= link_to meeting.title, group_meeting_path(@group, meeting.id), class: "event-title" %>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
