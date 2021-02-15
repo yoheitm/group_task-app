@@ -10,7 +10,7 @@
       <%= image_tag 'arrow_top.png' %>
       <ul class="group-info-lists hidden" id="group-pull-down">
         <li class="pull-down-list"><%= link_to "グループを編集", edit_group_path(@group), class: "group-info-bar"%></li>
-        <li class="pull-down-list"><%= link_to "グループを削除", group_path(@group), method: :delete, data: { confirm: '本当にグループを削除しますか?' } ,class: "group-info-bar" %></li>
+        <li class="pull-down-list"><%= link_to "グループを削除", group_path(@group), method: :delete, data: { confirm: 'グループを削除してもよろしいですか?' } ,class: "group-info-bar" %></li>
       </ul>
     </div>
   </div>
@@ -30,7 +30,7 @@
           <span class="event-info"><%= meeting.title %></span>
           <%= link_to '詳細', group_meeting_path(@group, meeting.id), class: "event-menu" %>
           <%= link_to '編集', edit_group_meeting_path(@group, meeting.id), class: "event-menu" %>
-          <%= link_to '削除', group_meeting_path(@group, meeting.id), method: :delete, data: { confirm: '本当にイベントを削除しますか?' }, class: "event-menu" %>
+          <%= link_to '削除', group_meeting_path(@group, meeting.id), method: :delete, data: { confirm: 'イベントを削除してもよろしいですか?' }, class: "event-menu" %>
         </div>
       <% end %>
     </div>

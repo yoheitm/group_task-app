@@ -34,7 +34,7 @@
           <div class="group-member-count">
             <%= group.users.count %><%= image_tag 'userpulldown.png',size: '13x13' %>
           </div>
-          <%= link_to image_tag("remove-icon.png",:size => '30x30', class: "drop-icon"), drop_group_path(group), method: :delete, class: "group-drop" %>
+          <%= link_to image_tag("remove-icon.png",:size => '30x30', class: "drop-icon"), drop_group_path(group), method: :delete, data: { confirm: 'グループから退出してもよろしいですか?' }, class: "group-drop" %>
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
           <div class="group-member-count">
             <%= group.users.count %><%= image_tag 'userpulldown.png',size: '13x13' %>
           </div>
-          <%= link_to image_tag("plus-icon.png",:size => '30x30', class: "join-icon"), join_group_path(group), method: :post, class: "group-join" %>
+          <%= link_to image_tag("plus-icon.png",:size => '30x30', class: "join-icon"), join_group_path(group), method: :post, data: { confirm: 'グループに参加してもよろしいですか?' }, class: "group-join" %>
         </div>
       </div>
     <% end %>
