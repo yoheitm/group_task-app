@@ -1,13 +1,11 @@
 class MessagesController < ApplicationController
+  before_action :set_message
   def index
     @message = Message.new
-    @group = Group.find(params[:group_id])
-    @groups = Group.all.order(id: "DESC")
     @messages = @group.messages.includes(:user)
   end
 
   def create
-    @group = Group.find(params[:group_id])
     @message = @group.messages.new(message_params)
     if @message.save
       redirect_to group_messages_path(@group)
@@ -18,6 +16,11 @@ class MessagesController < ApplicationController
   end
 
   private
+
+  def set_message
+    @group = Group.find(params[:group_id])
+    @groups = Group.all.order(id: "DESC")
+  end
 
   def message_params
     params.require(:message).permit(:content).merge(user_id: current_user.id)
