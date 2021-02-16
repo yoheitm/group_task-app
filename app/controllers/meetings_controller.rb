@@ -24,7 +24,7 @@ class MeetingsController < ApplicationController
   end
 
   def update
-    @meeting = Meeting.find(params[:id])
+    @meeting = @group.meetings.find(params[:id])
     @meeting.update(meeting_params)
     if @meeting.save
       redirect_to action: :show
