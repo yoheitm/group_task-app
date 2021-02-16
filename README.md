@@ -124,17 +124,17 @@ https://grouptask-app.herokuapp.com/
 
 ### Association
 
--belongs_to :group
+- belongs_to :group
 
 # ローカルでの動作方法
 
-### 開発環境
+## 開発環境
 
 Ruby on Rails ver 6.0.0
 
-### インストール後に行うコマンド
+## インストール後に行うコマンド
 
-% bundle install
-% rails db:create
-% rails db:migrate
-% rails s
+- % bundle install
+- % rails db:create
+- % rails db:migrate
+- % rails s
