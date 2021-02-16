@@ -21,15 +21,15 @@
     <%= image_tag 'event.png', size: '130x130' %>
   </div>
   <div class="event-contents">
-    <p>タイトル</p>
+    <h5>タイトル</h5>
     <span class="event-element"><%= @meeting.title %></span>
   </div>
   <div class="event-contents">
-    <p>日時</p>
+    <h5>日時</h5>
     <span class="event-element"><%= @meeting.start_time.strftime("%Y-%m-%d %H:%M") %></span>
   </div>
   <div class="event-contents">
-    <p>内容</p>
+    <h5>内容</h5>
     <span class="event-element"><%= @meeting.content %></span>
   </div>
   <div class="event-contents-link">

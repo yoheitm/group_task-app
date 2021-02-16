@@ -106,7 +106,7 @@
   align-items: center;
   overflow: scroll;
 }
-p {
+.event-contents h5{
   font-size: 15px;
   font-family: monospace;
   background-color: white;
