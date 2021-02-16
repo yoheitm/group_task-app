@@ -62,6 +62,8 @@ https://grouptask-app.herokuapp.com/
 
 # データベース設計
 
+![group_task-app-ER](https://user-images.githubusercontent.com/76470390/108070784-420e9280-70a8-11eb-8349-1ebee856b8dd.png)
+
 ## users　テーブル
 
 | Column             | Type     | Options                       |
