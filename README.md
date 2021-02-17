@@ -43,6 +43,7 @@ https://grouptask-app.herokuapp.com/
 
 ## ユーザー管理機能
 ユーザーはアカウントにアイコンを登録することができます。<br>ユーザー同士の距離が密接なアプリケーションになっているので、この機能によってユーザー同士でコミュニケーションがし易くなると思います。
+### gif画像
 https://user-images.githubusercontent.com/76470390/108072100-d4636600-70a9-11eb-9367-75eeccca3eef.mp4
 
 ## グループ管理機能
