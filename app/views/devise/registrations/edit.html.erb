@@ -6,7 +6,7 @@
     <% if @user.image.present? %>
       <%= image_tag @user.image, :size => '100x100' %>
     <% else %>
-      <%= image_tag "/assets/defaulticon.png", :size => '100x100' %>
+      <%= image_tag "default.png", :size => '100x100' %>
     <% end %>
     <div class="field">
       <div class='field-label'>
