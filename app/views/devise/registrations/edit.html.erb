@@ -1,13 +1,15 @@
 <div class="container">
   <h1>アカウントを編集</h1>
   <div class="flame-form">
-  <%= form_with model: @user, url: user_registration_path, id: 'new_account', class: 'new_account', local: true do |f| %>
+  <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_account', local: true do |f| %>
     <%= render 'devise/shared/error_messages', model: f.object %>
+    <div id="image-list">
     <% if @user.image.present? %>
       <%= image_tag @user.image, :size => '100x100' %>
     <% else %>
       <%= image_tag "default.png", :size => '100x100' %>
     <% end %>
+    </div>
     <div class="field">
       <div class='field-label'>
         <%= f.label :プロフィール画像 %>
@@ -61,6 +63,6 @@
   <% end %>
   </div>
 </div>
-<div class='top-page-back'>
+<div class='top-page-back', id="image">
   <%= link_to "トップページへ戻る",root_path , class: "user-session-link"%>
 </div>
