@@ -3,8 +3,8 @@
   <div class="flame-form">
   <%= form_with model: @user, url: user_registration_path, id: 'new_account', class: 'new_account', local: true do |f| %>
     <%= render 'devise/shared/error_messages', model: f.object %>
-    <% if @user.image? %>
-      <%= image_tag @user.image.url, :size => '100x100' %>
+    <% if @user.image.present? %>
+      <%= image_tag @user.image, :size => '100x100' %>
     <% else %>
       <%= image_tag "/assets/defaulticon.png", :size => '100x100' %>
     <% end %>
@@ -13,7 +13,7 @@
         <%= f.label :プロフィール画像 %>
       </div>
       <div class="field-input">
-        <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: 'text-area' %>
+        <%= f.file_field :image,　class: 'text-area' %>
       </div>
     </div>
     <div class="field">

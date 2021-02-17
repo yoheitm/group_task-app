@@ -2,8 +2,8 @@
   <div class="header-user-info" id="lists">
     <div class="user-info">
       <div class="user-info-image">
-        <% if current_user.image? %>
-          <%= image_tag current_user.image.thumb50.url %>
+        <% if current_user.image.present? %>
+          <%= image_tag current_user.image, :size => '30x30' %>
         <% else %>
           <%= image_tag "/assets/defaulticon.png", :size => '30x30' %>
         <% end %>
