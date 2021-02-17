@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update, :destroy, :drop]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
 
   def index
     @groups = Group.all.order(id: "DESC")
@@ -54,5 +55,11 @@ class GroupsController < ApplicationController
 
   def set_group
     @group = Group.find(params[:id])
+  end
+
+  def move_to_index
+    unless @group.users.include?(current_user)
+      redirect_to root_path
+    end
   end
 end

@@ -3,6 +3,9 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+    unless @group.users.include?(current_user)
+      redirect_to root_path
+    end
   end
 
   def create

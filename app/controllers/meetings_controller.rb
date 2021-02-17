@@ -1,5 +1,6 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting
+  before_action :move_to_index
 
   def index
     @meetings = @group.meetings.order(id: "DESC")
@@ -53,4 +54,9 @@ class MeetingsController < ApplicationController
     params.require(:meeting).permit(:title, :content, :start_time).merge(group_id: @group.id)
   end
 
+  def move_to_index
+    unless @group.users.include?(current_user)
+      redirect_to root_path
+    end
+  end
 end
